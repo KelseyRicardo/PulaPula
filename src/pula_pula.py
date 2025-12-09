@@ -72,6 +72,10 @@ class PulaPula:
         return False
 
     def fechar(self):
+        for i in self.fila:
+            self.papaiChegou(i.getNome())
+        for i in self.criancasPulando:
+            self.papaiChegou(i.getNome())
         self.fila = []
         self.criancasPulando = []
         self.contas = dict()
